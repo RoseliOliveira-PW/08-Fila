@@ -87,14 +87,42 @@ void insere()
 	cout << "Digite o elemento: ";
 	cin >> novo->valor;
 	novo->prox = NULL;
+	novo->valor;
+	novo->prox = NULL;
+	if (inicio == NULL) {
+		inicio = novo;
+	}
+	else {
+		fim->prox = novo;
+	}
+	fim = novo;
 
 
 }
 
 void remove()
-{
-
-
-
+{   
+	int item;
+	NO* temp = inicio;
+	cout << "fila: [";
+	while (temp != NULL) {
+		cout << temp->valor << " ";
+		temp = temp->prox;
+	}
+	cout << "]\n";
+	temp = inicio;
+	inicio->valor;
+	if (inicio != NULL) {
+		cout << " O valor do primeiro elemento é: " << inicio->valor << endl;
+		inicio = inicio->prox;
+		delete temp;
+		cout << " O elemento vai ser deletado \n";
+	}
+	else {
+		 cout << "Não existe mais nenhum elemento \n";
+		 cout << "A lista está vazia \n";
+		return;
+	}
 }
+
 
